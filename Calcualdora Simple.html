@@ -1,0 +1,64 @@
+Calculadora Simple by Leugim Pereira
+
+<script language="javascript">
+var inputstring=" "
+function updatestring(value)
+{
+inputstring += value;
+document.calculator.input.value=inputstring;
+}
+</script>
+
+<center>
+<table border="5" bordercolor="#bebebe" cellspacing="8">
+<form name="calculator"></form>
+<tbody><tr><th>
+Calculadora Simple
+</th>
+</tr><tr align="center">
+<td>
+<input type="text" name="input" maxlength="10" size="24">
+</td></tr>
+<tr align="center"><td>
+    
+<input type="button" value="  +  " onclick="updatestring('+')">
+ <input type="button" value="  -  " onclick="updatestring('-')">
+  <input type="button" value="  /  " onclick="updatestring('/')">
+   <input type="button" value="  *  " onclick="updatestring('*')">
+    <input type="button" value="  %  " onclick="updatestring('%')">
+    
+</td></tr><tr align="center"><td>
+
+<input type="button" value="  1  " onclick="updatestring('1')">
+ <input type="button" value="  2  " onclick="updatestring('2')">
+  <input type="button" value="  3  " onclick="updatestring('3')">
+    
+</td></tr><tr align="center"><td>
+
+<input type="button" value="  4  " onclick="updatestring('4')">
+ <input type="button" value="  5  " onclick="updatestring('5')">
+  <input type="button" value="  6  " onclick="updatestring('6')">
+    
+</td></tr><tr align="center"><td>
+    
+<input type="button" value="  7  " onclick="updatestring('7')">
+ <input type="button" value="  8  " onclick="updatestring('8')">
+  <input type="button" value="  9  " onclick="updatestring('9')">
+    
+</td></tr>
+    
+<tr align="center"><td>
+    
+<input type="button" value="  0  " onclick="updatestring('0')">
+    
+</td></tr>
+    
+<tr align="center"><td>
+<input type="button" value="  Borrar/CE  " onclick="input.value=' ';inputstring=' ' ">
+<input type="button" value="  =  " onclick="input.value=eval(inputstring);">
+</td>
+</tr>
+
+</tbody></table>
+</center>
+

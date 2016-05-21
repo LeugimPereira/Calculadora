@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Calcualdoras Online -BETA-</title>
+        <meta name="description" content="Una guía interactiva de primeros pasos para Brackets.">
+        <link rel="stylesheet" href="materialize.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+ 
+<!-- script calcualdora cientifica -->        
+        
+<SCRIPT LANGUAGE="JavaScript">
+
+
+function addChar(input, character) {
+if(input.value == null || input.value == "0")
+input.value = character
+else
+input.value += character
+}
+function cos(form) {
+form.display.value = Math.cos(form.display.value);}
+function sin(form) {
+form.display.value = Math.sin(form.display.value);}
+function tan(form) {
+form.display.value = Math.tan(form.display.value);}
+function sqrt(form) {
+form.display.value = Math.sqrt(form.display.value);}
+function ln(form) {
+form.display.value = Math.log(form.display.value);}
+function exp(form) {
+form.display.value = Math.exp(form.display.value);}
+function sqrt(form) {
+form.display.value = Math.sqrt(form.display.value);}
+function deleteChar(input) {
+input.value = input.value.substring(0, input.value.length - 1)
+}
+function changeSign(input) {
+if(input.value.substring(0, 1) == "-")
+input.value = input.value.substring(1, input.value.length)
+else
+input.value = "-" + input.value
+}
+function compute(form)  {
+form.display.value = eval(form.display.value)}
+function square(form)  {
+form.display.value = eval(form.display.value) *
+eval(form.display.value)}
+function checkNum(str)  {
+for (var i = 0; i < str.length; i++) {
+var ch = str.substring(i, i+1)
+if (ch < "0" || ch > "9") {
+if (ch != "/" && ch != "*" && ch != "+" && ch !=
+"-" && ch != "."
+&& ch != "(" && ch!= ")") {
+alert("invalid entry!")
+return false
+         }
+      }
+   }
+return true
+}
+
+</SCRIPT>
+        
+<!-- script calcualdora cientifica -->  
+        
+<!-- calculadora simple--------------> 
+        
+  <script language="javascript">
+var inputstring=" "
+function updatestring(value)
+{
+inputstring += value;
+document.calculator.input.value=inputstring;
+}
+</script>      
+        
+<!-- calculadora simple-------------->          
+        
+        
+    </head>
+    <body>      
+        
+        <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="@font-face"><img width= "350px" height="65px"  src="file:///C:/Users/Leugim/Desktop/step0004.png"></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        
+        <li><a href="index4.html"><i class="material-icons left">info_outline</i>Informacion</a></li>
+        <li><a href="index3.html"><i class="material-icons left">error</i>Ayuda</a></li>
+        <li><a href="index2.html"><i class="material-icons left">code</i>Scripts(JS)</a></li>
+      </ul>
+    </div>
+  </nav>
+        
+        
+            
+            
+        
+      <div class="progress">
+      <div class="indeterminate"></div>
+  </div>
+  
+        
+ 
+  
+ <div class="row">
+     
+   <div class="card-panel amber darken-1" >
+    <h5 class="center-align">Calculadora científica</h5>
+   
+ 
+       <center>Calculadora científica by Leugim Pereira</center>
+ 
+
+<FORM>
+       
+<input name="display" value="0" size=25></td>
+<br>
+       
+
+
+<!---------------------------------------------------------------------------------->  
+<tr align="center"><td>         
+       
+<input type="button" value="   exp  " onClick="if (checkNum(this.form.display.value)) { 
+exp(this.form) }">
+       
+<input type="button" value="    7    " onClick="addChar(this.form.display, '7')">
+<input type="button" value="    8    " onClick="addChar(this.form.display, '8')">
+<input type="button" value="    9    " onClick="addChar(this.form.display, '9')">
+<input type="button" value="    /    " onClick="addChar(this.form.display, '/')">
+       
+<br>
+<input type="button" value="   ln    " onClick="if (checkNum(this.form.display.value)) { 
+ln(this.form) }">
+       
+<input type="button" value="    4    " onClick="addChar(this.form.display, '4')">
+<input type="button" value="    5    " onClick="addChar(this.form.display, '5')">
+<input type="button" value="    6    " onClick="addChar(this.form.display, '6')">
+<input type="button" value="    *    " onClick="addChar(this.form.display, '*')">
+       
+<br>
+<input type="button" value="   sqrt  " onClick="if (checkNum(this.form.display.value)) {
+sqrt(this.form) }">
+       
+<input type="button" value="    1    " onClick="addChar(this.form.display, '1')">
+<input type="button" value="    2    " onClick="addChar(this.form.display, '2')">
+<input type="button" value="    3    "  onClick="addChar(this.form.display, '3')">
+<input type="button" value="    -    "  onClick="addChar(this.form.display, '-')">
+       
+<br>
+<input type="button" value="   sq    " onClick="if (checkNum(this.form.display.value)) { 
+square(this.form) }">
+       
+<input type="button" value="    0    " onClick="addChar(this.form.display, '0')"> 
+<input type="button" value="    .    " onClick="addChar(this.form.display, '.')"> 
+<input type="button" value="   +/-   " onClick="changeSign(this.form.display)">
+<input type="button" value="    +    " onClick="addChar(this.form.display, '+')">
+       
+<br>
+       
+<input type="button" value="    (    " onClick="addChar(this.form.display, '(')"> 
+<input type="button" value="   cos   " onClick="if (checkNum(this.form.display.value)) { 
+cos(this.form) }">
+       
+<input type="button" value="   sin   " onClick="if (checkNum(this.form.display.value)) {
+sin(this.form) }">
+<input type="button" value="   tan   " onClick="if (checkNum(this.form.display.value)) { 
+tan(this.form) }">
+<input type="button" value="    )    " onClick="addChar(this.form.display, ')')"> 
+       
+<br>
+       
+<input type="button" value="   CE       "  onClick="this.form.display.value = 0 ">
+<input type="button" value="   borrar/<--  " onClick="deleteChar(this.form.display)">
+<input type="button" value="   =     " name="enter"
+onClick="if (checkNum(this.form.display.value)) { 
+compute(this.form) }">
+       
+</FORM>
+ </td></tr></tbody></table>    
+
+
+
+
+       
+  </div>
+
+     
+
+     <div  class="card-panel amber darken-1" >
+    <h5 class="center-align">Calculadora Simple</h5>
+      <a></a>
+       <center>Calculadora Simple by Leugim Pereira
+
+
+
+<center>
+<table border="5" bordercolor="#bebebe" cellspacing="8">
+<form name="calculator">
+<tbody><tr><th>
+Calculadora Simple
+</th>
+</tr><tr align="center">
+<td>
+<input type="text" name="input" maxlength="10" size="24">
+</td></tr>
+<tr align="center"><td>
+    
+<input type="button" value="  +  " onclick="updatestring('+')">
+ <input type="button" value="  -  " onclick="updatestring('-')">
+  <input type="button" value="  /  " onclick="updatestring('/')">
+   <input type="button" value="  *  " onclick="updatestring('*')">
+    <input type="button" value="  %  " onclick="updatestring('%')">
+    
+</td></tr><tr align="center"><td>
+
+<input type="button" value="  1  " onclick="updatestring('1')">
+ <input type="button" value="  2  " onclick="updatestring('2')">
+  <input type="button" value="  3  " onclick="updatestring('3')">
+    
+</td></tr><tr align="center"><td>
+
+<input type="button" value="  4  " onclick="updatestring('4')">
+ <input type="button" value="  5  " onclick="updatestring('5')">
+  <input type="button" value="  6  " onclick="updatestring('6')">
+    
+</td></tr><tr align="center"><td>
+    
+<input type="button" value="  7  " onclick="updatestring('7')">
+ <input type="button" value="  8  " onclick="updatestring('8')">
+  <input type="button" value="  9  " onclick="updatestring('9')">
+    
+</td></tr>
+    
+<tr align="center"><td>
+    
+<input type="button" value="  0  " onclick="updatestring('0')">
+    
+</td></tr>
+    
+<tr align="center"><td>
+<input type="button" value="  Borrar/CE  " onclick="input.value=' ';inputstring=' ' ">
+<input type="button" value="  =  " onclick="input.value=eval(inputstring);">
+</td>
+</tr>
+</form>
+</tbody></table>
+</center>
+
+</center>
+         
+  </div>
+         
+   </div>       
+  
+  
+
+       
+
+
+    </body>
+</html>
+<!--
+
+    [[[[[[[[[[[[[[[      ]]]]]]]]]]]]]]]
+    [::::::::::::::      ::::::::::::::]
+    [::::::::::::::      ::::::::::::::]
+    [::::::[[[[[[[:      :]]]]]]]::::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[     CODE THE WEB     ]:::::]
+    [:::::[  http://brackets.io  ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [::::::[[[[[[[:      :]]]]]]]::::::]
+    [::::::::::::::      ::::::::::::::]
+    [::::::::::::::      ::::::::::::::]
+    [[[[[[[[[[[[[[[      ]]]]]]]]]]]]]]]
+
+-->
